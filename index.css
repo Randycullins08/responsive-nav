@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: darkblue;
+  color: white;
+  height: 100px;
+}
+
+.main-nav .logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-nav .logo-wrapper h3 {
+  margin-left: 1.5em;
+}
+
+.main-nav .right-side-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav .right-side-wrapper ul {
+  display: flex;
+}
+
+.main-nav .right-side-wrapper ul li {
+  margin-right: 1em;
+}
+
+.menu-icon-container {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.show-mobile-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkblue;
+  color: white;
+  height: 30vh;
+}
+
+.show-mobile-nav .right-side-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.show-mobile-nav .right-side-wrapper ul li {
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.input-container .input-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border: 1px solid darkblue;
+}
+
+.input-container .input-wrapper button {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 751px) {
+  .show-mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .menu-icon-container {
+    display: block;
+    background-color: darkblue;
+  }
+
+  .menu-icon-container .menu-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+    height: 50px;
+    width: 50px;
+  }
+
+  .menu-icon-container .menu-icon-wrapper i {
+    font-size: 1.5em;
+  }
+
+  .menu-icon-container .menu-icon-wrapper i:hover {
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
